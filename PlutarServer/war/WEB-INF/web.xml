@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+  <!-- Servlets --> 
+ 
+  <servlet>
+    <servlet-name>postMessage</servlet-name>
+    <servlet-class>com.demo.message.server.postMessage</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>postMessage</servlet-name>
+    <url-pattern>/api/postmessage</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>getMP3</servlet-name>
+    <servlet-class>com.demo.message.server.getMP3</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>getMP3</servlet-name>
+    <url-pattern>/api/getmp3</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>getIdMessage</servlet-name>
+    <servlet-class>com.demo.message.server.getIdMessage</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>getIdMessage</servlet-name>
+    <url-pattern>/api/getidmessage</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>init</servlet-name>
+    <servlet-class>com.demo.message.server.init</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>init</servlet-name>
+    <url-pattern>/api/init</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>raz</servlet-name>
+    <servlet-class>com.demo.message.server.raz</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>raz</servlet-name>
+    <url-pattern>/api/raz</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>checkSFR</servlet-name>
+    <servlet-class>com.demo.message.server.checkSFR</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>checkSFR</servlet-name>
+    <url-pattern>/api/checksfr</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>cronTask</servlet-name>
+    <servlet-class>com.demo.message.server.crontask</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+    <servlet-name>cronTask</servlet-name>
+    <url-pattern>/api/crontask</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+ 
+
+
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+</web-app>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+<!-- 
+Page accessible a http://demomessage.appspot.com/index.html
+faisant la demonstration du depot de message depuis le web
+un simple formulaire suffit avec eventuellement ajout d'un mot de passe pour
+securiser l'acces
+Voir l'article : http://www.html5rocks.com/en/tutorials/getusermedia/intro/?redirect_from_locale=fr
+
+
+Remarques
+ - l'implementation fonctionne sur les navigateurs web sous android mais pas sur iPhone
+ - sur les postes fixes depend du device
+-->
+
+
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+<title>Deposer un message</title>
+
+</head>
+<body>
+
+<h1>Demonstration du depot direct sur messagerie SFR</h1>
+
+
+<FORM 
+	method=POST
+	enctype="multipart/form-data" 
+	action="/api/postmessage?device=browser&fileformat=mp3">
+
+<TABLE BORDER=0>
+	<TR>
+		<TD>Numeros SFR (separateur ;)</TD>
+		<TD><INPUT value="06" type=text name="userIdentifier"></TD>
+	</TR>
+
+	<TR>
+		<TD>Deposer dans : </TD>
+		<TD><INPUT value="10" type=text name="nbMinutes"> minutes</TD>
+	</TR>
+
+	<TR>
+		<TD>Message a deposer</TD>
+		<TD><input type="file" accept="audio/*" capture="microphone" name="messageFile"></input></TD>
+	</TR>
+	
+	<TR>
+	<TD COLSPAN=2>
+		<INPUT type="submit" value="Envoyer">
+	</TD>
+</TR>
+
+</TABLE>
+</body>
+</html>

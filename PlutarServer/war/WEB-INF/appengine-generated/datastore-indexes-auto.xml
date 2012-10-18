@@ -1,0 +1,11 @@
+<!-- Indices written at Mon, 15 Oct 2012 13:50:54 CEST -->
+
+<datastore-indexes>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Message" ancestor="false" source="auto">
+        <property name="device" direction="asc"/>
+        <property name="sendDate" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>
