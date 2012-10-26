@@ -52,7 +52,7 @@ public class RestCall  {
 	//Inscrire dans la variable tokenSFRAPI, le token de votre service récupérer 
 	//sur http://api.sfr.fr/ ou directement dans l'API test tool
 	//https://api.sfr.fr/index.php?q=apitesttool/
-	private String tokenSFRAPI=URLEncoder.encode("<token SFR API>"); 
+	private String tokenSFRAPI=URLEncoder.encode("5559a0ac1cae1f95d8e4d1bb84063487"); 
 	private String ident="token="+tokenSFRAPI+"&reponseType=json";
 	
 	private static final Logger log = Logger.getLogger(RestCall.class.getName());
